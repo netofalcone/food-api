@@ -17,11 +17,13 @@ module.exports = mongoose;
 const Product = require('./models/Product')
 const Customer = require('./models/customer')
 const Order = require('./models/order')
+const Restaurant = require('./models/restaurant')
 
 
 // Carregar as rotas
 const indexRoute = require('./routes/index-route')
 const productRoute = require('./routes/product-route')
+const restaurantRoute = require('./routes/restaurant-route')
 const customerRoute = require('./routes/customer-route')
 const orderRoute = require('./routes/order-route')
 
@@ -45,6 +47,7 @@ app.use('/', indexRoute);
 app.use('/products', productRoute);
 app.use('/customers', customerRoute);
 app.use('/orders', orderRoute);
+app.use('/restaurants', restaurantRoute);
 
 
 module.exports = app;

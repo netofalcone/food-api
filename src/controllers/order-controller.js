@@ -30,6 +30,7 @@ exports.post = async (req, res, next) => {
 
 
         await repository.create({
+            restaurant: data.id,        
             customer: data.id,
             number: guid.raw().substring(0, 6),
             //gera um guid e pega os 6 primeiros caracteres
