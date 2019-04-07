@@ -1,0 +1,16 @@
+'use strict';
+
+var express = require('express');
+var router = express.Router();
+var controller = require('../controllers/product-controller');
+
+//--ROTAS--------------------------------------
+router.get('/', controller.get);
+router.get('/:slug', controller.getBySlug);
+router.get('/admin/:id', controller.getById);
+router.get('/tags/:tag', controller.getByTag);
+router.post('/', controller.post);
+router.put('/:id', controller.put);
+router.delete('/:id', controller.delete);
+
+module.exports = router;
