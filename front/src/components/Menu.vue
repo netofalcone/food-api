@@ -1,10 +1,14 @@
 <template>
-    <aside class="menu"> </aside>
+    <aside class="menu" v-show="isMenuVisible"> </aside>
 </template>
 
 <script>
+
+import { mapState } from 'vuex'
+
 export default {
-    name: 'Menu'
+    name: 'Menu',
+    computed: mapState(['isMenuVisible'])
 
 }
 </script>
@@ -12,7 +16,7 @@ export default {
 <style>
 .menu {
     grid-area:menu;
-    background: linear-gradient(to right, #c4c0bf, #ffffff);
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
 
     display: flex;
     flex-direction: column;

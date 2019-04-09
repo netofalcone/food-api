@@ -2,7 +2,7 @@
 
 
 
-          <v-img src="https://picsum.photos/510/300?random"  contain></v-img>
+      
  
 
 
