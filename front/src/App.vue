@@ -17,6 +17,7 @@
 <script>
 
 import {mapState} from 'vuex'
+import Restaurant from '@/config/restaurants'
 
 import Header from '@/components/Header'
 import Menu from '@/components/Menu'
@@ -24,9 +25,13 @@ import Content from '@/components/Content'
 import Footer from '@/components/Footer'
 
 export default {
+
+
 	name: "App",
 	components: {Header, Menu, Content, Footer},
 	computed: mapState(['isMenuVisible'])
+
+
 
 }
 </script>
@@ -48,7 +53,7 @@ export default {
 	  height: 100vh;
 	  display: grid;
 
-	  grid-template-rows: 60px 1fr 40px;
+	  grid-template-rows: 90px 1fr 40px;
 	  grid-template-columns: 300px 1fr;
 	  grid-template-areas:
 	  "header header"
